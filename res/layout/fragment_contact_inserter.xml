@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+	android:paddingTop="16dp"
+	android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+    
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:imeOptions="actionNext"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress" 
+        android:imeOptions="actionNext"/>
+
+    <EditText
+        android:id="@+id/secondEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/secondEmail"
+        android:inputType="textEmailAddress" 
+        android:imeOptions="actionNext"/>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/phone"
+        android:inputType="phone" 
+        android:imeOptions="actionNext"/>
+
+    <EditText
+        android:id="@+id/secondPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/secondPhone"
+        android:inputType="phone" 
+        android:imeOptions="actionNext"/>
+    
+    <EditText
+        android:id="@+id/notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/note" 
+        android:inputType="text"
+        android:imeOptions="actionNext"/>
+    
+    <EditText
+        android:id="@+id/postal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/postal" 
+        android:inputType="textPostalAddress"
+        android:imeOptions="actionSend"/>
+    
+    <Button android:id="@+id/button_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addContact"
+        android:layout_gravity="right"
+        
+        android:onClick="sendMessage" />
+</LinearLayout>
