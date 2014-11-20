@@ -15,3 +15,7 @@ public class CalendarFragment extends Fragment
 		return rootView;
 	}
 }
+I'm a little tea pot
+short and stout
+here is my handle
+and here is my spout
