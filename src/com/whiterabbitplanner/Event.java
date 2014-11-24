@@ -11,20 +11,20 @@ public class Event {
 	boolean priority;
 	String soundLocation;
 	String notificationText;
-	Contact people[];
+	//Contact people[];
 	
 	//if given everything
-	public Event(Date date1, Time time1, boolean priority1, String soundLocation1, String notificationText1, Contact people1[])
+	public Event(Date date1, Time time1, boolean priority1, String soundLocation1, String notificationText1/*, Contact people1[]*/)
 	{
 		date = date1;
 		time = time1;
 		priority = priority1;
 		soundLocation = soundLocation1;
 		notificationText = notificationText1;
-		people = people1;
+		/*people = people1;*/
 	}
 	
-	//if not given contacts
+	/*//if not given contacts
 	public Event(Date date1, Time time1, boolean priority1, String soundLocation1, String notificationText1)
 	{
 		date = date1;
@@ -33,7 +33,7 @@ public class Event {
 		soundLocation = soundLocation1;
 		notificationText = notificationText1;
 	}
-	
+	*/
 	
 	
 	public boolean isTriggered()

@@ -1,36 +1,30 @@
 package com.whiterabbitplanner;
 
-import java.util.Collections;
-
-import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
-import android.support.v4.widget.SimpleCursorAdapter;
-import android.support.v4.app.LoaderManager.LoaderCallbacks;
-import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.Contacts;
-import android.provider.ContactsContract.Intents;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.app.ListActivity;
-import android.view.Gravity;
-import android.view.ViewGroup.LayoutParams;
-import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v4.widget.CursorAdapter;
-import android.widget.AdapterView;
+import android.support.v4.widget.SimpleCursorAdapter;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AbsListView;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ListView;
 
 public class ContactsFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>, AdapterView.OnItemClickListener
 {
+	public ContactsFragment(){
+		
+	}
+	
 	//ListView object to display contacts
 	ListView mContactsList;
 	//This is the Adapter being used to display the list's data
@@ -45,8 +39,8 @@ public class ContactsFragment extends Fragment implements LoaderManager.LoaderCa
 	private static final int CONTACT_ID_INDEX = 0;
 	//The column index for the LOOKUP_KEY column
 	private static final int LOOKUP_KEY_INDEX = 1;
-	//The column index for the DISPLAY_NAME_PRIMARY column
-	private static final int DISPLAY_NAME_PRIMARY_INDEX = 2;
+	//The column index for the DISPLAY_NAME_PRIMARY column (????????Unused)
+	//private static final int DISPLAY_NAME_PRIMARY_INDEX = 2;
 	
 	
 	//This is the select criteria
@@ -66,7 +60,39 @@ public class ContactsFragment extends Fragment implements LoaderManager.LoaderCa
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
 		View rootView = inflater.inflate(R.layout.fragment_contacts, container, false);
-		return rootView;
+
+		//Button Leading to inserter
+		final Button toInserter = (Button) rootView.findViewById(R.id.to_inserter);
+		//final Button cancelContact = (Button) rootView.findViewById(R.id.button_cancel);
+		
+		toInserter.setOnClickListener(new Button.OnClickListener() {
+	    	@Override
+	        public void onClick(View v) {
+	    		// Create new fragment and transaction
+	    		Fragment CIF = new ContactInserterFragment();
+	    		
+	    	    // consider using Java coding conventions (upper first char class names!!!)
+	    	    android.support.v4.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+	    	    
+	    	    /*// Replace whatever is in the fragment_container view with this fragment,
+	    	    // and add the transaction to the back stack
+	    	     transaction.setCustomAnimations(R.animator.enter_slide, R.animator.exit_slide); //Later. 
+	    	    // http://stackoverflow.com/questions/4932462/animate-the-transition-between-fragments
+	    	    // http://android-er.blogspot.com/2012/02/apply-animation-on-button.html
+	    	    */
+	    	    
+	    	    transaction.replace(R.id.fragment_contacts, CIF, "Inserter");
+	    	    transaction.addToBackStack(null);
+	    	    
+	    	    // Commit the transaction
+	    	    transaction.commit();
+	    	}
+	    });
+	    return rootView;
+	}
+	
+	public void buttonTransition(Button b,int transitionTime){
+		
 	}
 	
 	public void onActivityCreated(Bundle savedInstanceState)
@@ -115,8 +141,6 @@ public class ContactsFragment extends Fragment implements LoaderManager.LoaderCa
 	@Override
 	public void onItemClick(AdapterView<?> parent, View item, int position, long rowID)
 	{
-		
-		
 		//Get the Cursor
 		Cursor cursor = ((CursorAdapter)parent.getAdapter()).getCursor();
 		//Move to the selected contact
@@ -131,20 +155,4 @@ public class ContactsFragment extends Fragment implements LoaderManager.LoaderCa
 		 * You can use mContactUri as the content URI for retrieving the details for a contact
 		 */	
 	}
-	
-	public void insertContact(String name, String email, String secondEmail, String phone, String secondPhone, String notes, String postal) {
-	    Intent intent = new Intent(Intent.ACTION_INSERT);
-	    intent.setType(Contacts.CONTENT_TYPE);
-	    intent.putExtra(Intents.Insert.NAME, name);
-	    intent.putExtra(Intents.Insert.EMAIL, email);
-	    intent.putExtra(Intents.Insert.SECONDARY_EMAIL, secondEmail);
-	    intent.putExtra(Intents.Insert.PHONE, phone);
-	    intent.putExtra(Intents.Insert.SECONDARY_PHONE, secondPhone);
-	    intent.putExtra(Intents.Insert.NOTES, notes);
-	    intent.putExtra(Intents.Insert.POSTAL, postal);
-	    if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
-	        startActivity(intent);
-	    }
-	}
-	
 }

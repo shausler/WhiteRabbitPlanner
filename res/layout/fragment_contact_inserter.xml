@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_contact_inserter"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
 	android:paddingTop="16dp"
 	android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:paddingRight="16dp"
+    android:background="@drawable/gradient_background">
     
     <EditText
         android:id="@+id/name"
@@ -65,11 +67,17 @@
         android:inputType="textPostalAddress"
         android:imeOptions="actionSend"/>
     
-    <Button android:id="@+id/button_send"
-        android:layout_width="wrap_content"
+    <Button android:id="@+id/button_insert"
+        android:layout_marginTop="20dp"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:text="@string/addContact"
-        android:layout_gravity="right"
-        
-        android:onClick="sendMessage" />
+        android:layout_gravity="center_horizontal"
+        android:text="@string/addContact"/>
+    
+    <Button android:id="@+id/button_cancel"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/cancel"
+        android:clickable="true"/>
 </LinearLayout>

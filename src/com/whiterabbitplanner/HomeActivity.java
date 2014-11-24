@@ -4,22 +4,19 @@ import info.whiterabbit.tabswipe.adapter.TabsPagerAdapter;
 
 import java.util.Locale;
 
-import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
+import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 
 public class HomeActivity extends FragmentActivity implements ActionBar.TabListener {
@@ -185,5 +182,20 @@ public class HomeActivity extends FragmentActivity implements ActionBar.TabListe
             return rootView;
         }
     }
+    
+    /*//button to open insert page
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+        case R.id.btnSearch:
+            //what to put here
+           FragmentManager fm = getFragmentManager();
+           FragmentTransaction ft = fm.beginTransaction();
+           ft.replace(R.id.show_fragment, new TestFragment(), "fragment_screen");
+           ft.commit();
+         break;
+        }
+    }   
+	*/
 
 }
