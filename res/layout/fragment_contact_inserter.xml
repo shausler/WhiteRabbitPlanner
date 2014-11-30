@@ -74,10 +74,5 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/addContact"/>
     
-    <Button android:id="@+id/button_cancel"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/cancel"
-        android:clickable="true"/>
+
 </LinearLayout>
