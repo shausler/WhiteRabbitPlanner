@@ -24,4 +24,18 @@
     <string name="title_activity_contact_inserter">Contact Insert</string>
 	<string name="new_contact">+</string>
 	<string name="cancel">Cancel</string>
+	<string name="about_summary">Android Calendar View Demo V0.5.0</string>
+    <string name="about">About</string>
+    <string name="pick_summary">start with ACTION_PICK</string>
+    <string name="pick">Pick up a Date</string>
+    <string name="show_summary">start with ACTION_VIEW</string>
+    <string name="show">Show Calendar</string>
+	<string name="hint">Hint: touch the first or last day of month to move to previous or next month.</string>
+    <string name="monday">MON</string>
+    <string name="tuesday">TUE</string>
+    <string name="wednesday">WED</string>
+    <string name="thursday">THU</string>
+    <string name="friday">FRI</string>
+    <string name="saturday">SAT</string>
+    <string name="sunday">SUN</string>
 </resources>

@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/fragment_contacts"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical" 
     android:clickable="true" 
     android:background="@drawable/gradient_background">
@@ -16,7 +16,7 @@
        	      android:clickable="true" />
 	
 	<!-- bottom bar -->
-	<LinearLayout
+	<RelativeLayout
 	    android:id="@+id/buttonBar"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
@@ -26,15 +26,15 @@
 
 		<Button
 		    android:id="@+id/to_inserter"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
+		    android:layout_width="50dp"
+		    android:layout_height="50dp"
 		    android:background="@drawable/roundedbutton"
 		    android:clickable="true"
 		    android:text="@string/new_contact"
 		    android:textColor="#EEEEEE"
-		    android:textSize="40sp"
+		    android:textSize="30sp"
 		    android:textStyle="bold" />   
-     </LinearLayout>
+     </RelativeLayout>
     
 </RelativeLayout>
 

@@ -183,19 +183,5 @@ public class HomeActivity extends FragmentActivity implements ActionBar.TabListe
         }
     }
     
-    /*//button to open insert page
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-        case R.id.btnSearch:
-            //what to put here
-           FragmentManager fm = getFragmentManager();
-           FragmentTransaction ft = fm.beginTransaction();
-           ft.replace(R.id.show_fragment, new TestFragment(), "fragment_screen");
-           ft.commit();
-         break;
-        }
-    }   
-	*/
-
+    
 }

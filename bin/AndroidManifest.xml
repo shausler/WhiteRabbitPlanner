@@ -41,6 +41,12 @@
             android:name=".ContactInserter"
             android:label="@string/title_activity_contact_inserter">
         </activity>
+        
+        <provider
+    	android:name="com.tyczj.extendedcalendarview.CalendarProvider"
+    	android:authorities="com.tyczj.extendedcalendarview.calendarprovider" 
+    	android:permission="signature"    />
+       	
     </application>
 
 </manifest>
