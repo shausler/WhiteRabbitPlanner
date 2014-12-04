@@ -23,15 +23,15 @@ public final class R {
 		public static final int day_bg = 0x7f020004;
 		public static final int day_selected = 0x7f020005;
 		public static final int green = 0x7f020008;
-		public static final int ic_launcher = 0x7f020009;
-		public static final int navigation_next_item = 0x7f02000c;
-		public static final int navigation_previous_item = 0x7f02000d;
-		public static final int normal_day = 0x7f02000e;
-		public static final int orange = 0x7f02000f;
-		public static final int purple = 0x7f020010;
-		public static final int quickcontact_badge_overlay_normal_light = 0x7f020011;
-		public static final int red = 0x7f020012;
-		public static final int today = 0x7f020014;
+		public static final int ic_launcher = 0x7f02000b;
+		public static final int navigation_next_item = 0x7f02000e;
+		public static final int navigation_previous_item = 0x7f02000f;
+		public static final int normal_day = 0x7f020010;
+		public static final int orange = 0x7f020011;
+		public static final int purple = 0x7f020012;
+		public static final int quickcontact_badge_overlay_normal_light = 0x7f020013;
+		public static final int red = 0x7f020014;
+		public static final int today = 0x7f020017;
 	}
 	public static final class id {
 		public static final int imageView1 = 0x7f0a0004;

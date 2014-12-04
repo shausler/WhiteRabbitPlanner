@@ -51,29 +51,40 @@ public final class R {
         public static final int gradient_background=0x7f020006;
         public static final int gradient_background_hover=0x7f020007;
         public static final int green=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int icon=0x7f02000a;
-        public static final int list_selector=0x7f02000b;
-        public static final int navigation_next_item=0x7f02000c;
-        public static final int navigation_previous_item=0x7f02000d;
-        public static final int normal_day=0x7f02000e;
-        public static final int orange=0x7f02000f;
-        public static final int purple=0x7f020010;
-        public static final int quickcontact_badge_overlay_normal_light=0x7f020011;
-        public static final int red=0x7f020012;
-        public static final int roundedbutton=0x7f020013;
-        public static final int today=0x7f020014;
-        public static final int typeb_calendar_today=0x7f020015;
+        public static final int home_list_selector=0x7f020009;
+        public static final int ic_contact_picture_2=0x7f02000a;
+        public static final int ic_launcher=0x7f02000b;
+        public static final int icon=0x7f02000c;
+        public static final int list_selector=0x7f02000d;
+        public static final int navigation_next_item=0x7f02000e;
+        public static final int navigation_previous_item=0x7f02000f;
+        public static final int normal_day=0x7f020010;
+        public static final int orange=0x7f020011;
+        public static final int purple=0x7f020012;
+        public static final int quickcontact_badge_overlay_normal_light=0x7f020013;
+        public static final int red=0x7f020014;
+        public static final int roundedbutton=0x7f020015;
+        public static final int sym_action_add=0x7f020016;
+        public static final int today=0x7f020017;
+        public static final int typeb_calendar_today=0x7f020018;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0019;
+        public static final int action_add=0x7f0a0022;
+        public static final int action_settings=0x7f0a0021;
         public static final int buttonBar=0x7f0a0016;
         public static final int button_insert=0x7f0a0013;
         public static final int calendar=0x7f0a000a;
         public static final int email=0x7f0a000d;
+        public static final int event_add_form=0x7f0a001a;
+        public static final int event_date=0x7f0a001c;
+        public static final int event_description=0x7f0a0020;
+        public static final int event_length=0x7f0a001f;
+        public static final int event_location=0x7f0a001e;
+        public static final int event_time=0x7f0a001d;
+        public static final int event_title=0x7f0a001b;
         public static final int fragment_contact_inserter=0x7f0a000b;
         public static final int fragment_contacts=0x7f0a0014;
-        public static final int hint=0x7f0a0018;
+        public static final int hint=0x7f0a0019;
         public static final int imageView1=0x7f0a0004;
         public static final int imageView2=0x7f0a0006;
         public static final int imageView3=0x7f0a0007;
@@ -81,6 +92,7 @@ public final class R {
         public static final int imageView5=0x7f0a0008;
         public static final int imageView6=0x7f0a0009;
         public static final int list=0x7f0a0015;
+        public static final int list_home=0x7f0a0018;
         public static final int name=0x7f0a000c;
         public static final int notes=0x7f0a0011;
         public static final int pager=0x7f0a0000;
@@ -102,13 +114,16 @@ public final class R {
         public static final int fragment_contact_inserter=0x7f030005;
         public static final int fragment_contacts=0x7f030006;
         public static final int fragment_home=0x7f030007;
-        public static final int main=0x7f030008;
+        public static final int home_list_item=0x7f030008;
+        public static final int main=0x7f030009;
+        public static final int popup_event=0x7f03000a;
     }
     public static final class menu {
         public static final int cont_book=0x7f090000;
         public static final int contact_book=0x7f090001;
         public static final int contact_inserter=0x7f090002;
         public static final int home=0x7f090003;
+        public static final int main_activity_actions=0x7f090004;
     }
     public static final class string {
         public static final int about=0x7f06001f;
